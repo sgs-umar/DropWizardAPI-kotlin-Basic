@@ -29,9 +29,11 @@ This will create a basic Gradle Kotlin project structure.
 
 Edit the build.gradle.kts file to include the necessary dependencies for Dropwizard and other components. [Refer here](https://github.com/sgs-umar/DropWizardAPI-kotlin-Basic/blob/master/app/build.gradle.kts) 
 
-### 3. Create Application Code
+### 3. Create Application Class and Configuration class
 
-Create your Dropwizard application class [APIApplication.kt](https://github.com/sgs-umar/DropWizardAPI-kotlin-Basic/blob/master/app/src/main/kotlin/org/example/APIApplication.kt) and other necessary components like resources like [HelloWorldResources](https://github.com/sgs-umar/DropWizardAPI-kotlin-Basic/blob/master/app/src/main/kotlin/org/example/resources/HelloWorldResources.kt), services like[HelloWorldService](https://github.com/sgs-umar/DropWizardAPI-kotlin-Basic/blob/master/app/src/main/kotlin/org/example/services/HelloWorldServices.kt), and etc.
+Create your Dropwizard application class [APIApplication.kt](https://github.com/sgs-umar/DropWizardAPI-kotlin-Basic/blob/master/app/src/main/kotlin/org/example/APIApplication.kt) and other necessary components like resources like [HelloWorldResources](https://github.com/sgs-umar/DropWizardAPI-kotlin-Basic/blob/master/app/src/main/kotlin/org/example/resources/HelloWorldResources.kt), services like[HelloWorldService](https://github.com/sgs-umar/DropWizardAPI-kotlin-Basic/blob/master/app/src/main/kotlin/org/example/services/HelloWorldServices.kt), and etc. 
+
+Create a Configuration Class [APIConfiguration.kt](https://github.com/sgs-umar/DropWizardAPI-kotlin-Basic/blob/master/app/src/main/kotlin/org/example/APIConfiguration.kt) to configure the configurations from config.yml
 
 ### 4. Create config.yml
 
