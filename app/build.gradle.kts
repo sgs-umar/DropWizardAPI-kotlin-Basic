@@ -36,6 +36,8 @@ dependencies {
     implementation("org.jdbi:jdbi3-core:3.45.3")
     implementation("io.dropwizard:dropwizard-db:5.0.0-alpha.1")
     implementation("io.dropwizard:dropwizard-jdbi3:5.0.0-alpha.1")
+    implementation("org.eclipse.jetty:jetty-servlets:11.0.22")
+
 
 
 }

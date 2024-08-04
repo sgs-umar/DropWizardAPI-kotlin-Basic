@@ -1,5 +1,4 @@
 package org.example.services
-
 import jakarta.inject.Inject
 import org.example.data.HelloWorldDao
 import org.jdbi.v3.core.Jdbi
