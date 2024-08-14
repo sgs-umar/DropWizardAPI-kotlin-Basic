@@ -37,9 +37,8 @@ dependencies {
     implementation("io.dropwizard:dropwizard-db:5.0.0-alpha.1")
     implementation("io.dropwizard:dropwizard-jdbi3:5.0.0-alpha.1")
     implementation("org.eclipse.jetty:jetty-servlets:11.0.22")
-
-
-
+    implementation("io.dropwizard:dropwizard-jackson:5.0.0-alpha.1")
+    implementation("com.google.code.gson:gson:2.11.0")
 }
 
 // Apply a specific Java toolchain to ease working on different environments.
