@@ -1,6 +1,7 @@
 package org.example.services
 
 import jakarta.inject.Inject
+import org.example.Constants.DesignationConstants
 import org.example.RequestModels.EmployeeAddRequest
 import org.example.data.HelloWorldDao
 import org.example.entities.Department
@@ -26,7 +27,7 @@ class HelloWorldServices @Inject constructor(private val jdbi: Jdbi) {
     }
 
     fun insertEmployee(request: EmployeeAddRequest): Int {
-        val allowance: Double = if (request.designationId == 16)  request.salary * 0.2 else request.salary * 0.1;
+        val allowance: Double = if (request.designationId == DesignationConstants.MANAGER)  request.salary * 0.2 else request.salary * 0.1;
         val employee = Employee(
             employeeName = request.employeeName,
             ddMappingId = request.ddMappingId,
