@@ -47,6 +47,30 @@ gradlew run
 ```
 This command will compile your Kotlin code, package it, and start the Dropwizard application. You should see output indicating that your application has started successfully.
 
+### 6. Build your Application as JAR
+
+You can build your Dropwizard application using Gradle. Open a terminal or command prompt in your project directory and run:
+```bash
+gradlew clean shadowJar
+```
+This command will clean, compile and build your Kotlin code, package it as a JAR. To run the JAR:
+```
+java -jar your-jar-file-location server location/config.yml
+```
+### 7. Dockerize your Application
+
+You can create a Docker Image of this application and run the image in a container. Configurations are mentioned in the DOCKERFILE.
+Make Sure you have docker or Deocker Desktop installed.
+
+*To Build a Docker Image*
+```bash
+docker build -t my-gradle-api .
+```
+
+*To Run a Docker Container*
+```bash
+docker run -d --name my-gradle-api-container -p 8001:8001 my-gradle-api
+```
 
 
 
