@@ -29,7 +29,7 @@ class APIApplication : Application<APIConfiguration>() {
         val factory = JdbiFactory()
         val jdbi = factory.build(env, config.database, "postgresql")
         val helloWorldService = HelloWorldServices(jdbi)
-        
+
         env.jersey().register(HelloWorldResources(helloWorldService))
     }
 
