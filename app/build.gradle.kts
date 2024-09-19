@@ -49,28 +49,24 @@ java {
         languageVersion = JavaLanguageVersion.of(21)
     }
 }
+val mainClassPath:String = "org.example.APIApplication"
 
 tasks.withType<JavaExec> {
     args = listOf("server", "../config.yml")
 }
 
-tasks.withType<Jar> {
-    manifest {
-        attributes["Main-Class"] = "org.example.APIApplication"
-    }
-}
-
 tasks.withType<ShadowJar> {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    archiveBaseName.set(project.name)
     mergeServiceFiles()
     exclude("META-INF/*.SF")
     exclude("META-INF/*.DSA")
     exclude("META-INF/*.RSA")
 }
 
-
 application {
     // Define the main class for the application.
-    mainClass.set("org.example.APIApplication")
+    mainClass.set(mainClassPath)
 }
 
 tasks.named<Test>("test") {
